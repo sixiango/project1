@@ -3492,7 +3492,7 @@ bool FAT_SetSize(FAT_FILE *file, const u32 size, u8 FillChar)
     
     if(reqsize!=0){
       pClusList[ClusListCount++]=curClus;
-      progressDraw(ClusListCount+1, ClusListMax*2);
+      //progressDraw(ClusListCount+1, ClusListMax*2);
       if(blocksize<=reqsize){
         reqsize-=blocksize;
         }else{
@@ -3508,7 +3508,7 @@ bool FAT_SetSize(FAT_FILE *file, const u32 size, u8 FillChar)
         return 0;//ShowLogHalt();
       }
       pClusList[ClusListCount++]=curClus;
-      progressDraw(ClusListCount+1 ,ClusListMax*2);
+  //    progressDraw(ClusListCount+1 ,ClusListMax*2);
       if(blocksize<=reqsize){
         reqsize-=blocksize;
         }else{
@@ -3540,7 +3540,7 @@ bool FAT_SetSize(FAT_FILE *file, const u32 size, u8 FillChar)
         return 0;//ShowLogHalt();
       }
       active_interface->fn_WriteSectors(curSec,blocksize/512,pblockbuf);
-      progressDraw(ClusListMax+idx+1 ,ClusListMax*2);
+      //progressDraw(ClusListMax+idx+1 ,ClusListMax*2);
     }
   }
   
@@ -3548,7 +3548,7 @@ bool FAT_SetSize(FAT_FILE *file, const u32 size, u8 FillChar)
   
   free(pClusList); pClusList=NULL;
   
-  progressEnd();
+  //progressEnd();
   
   iprintf("FAT2_SetSize: Proceeded.\n");
   return 1;
