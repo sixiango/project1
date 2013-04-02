@@ -49,13 +49,15 @@
  #endif
 #endif
 
-#include "nds/registers_alt.h" //[ej]
+//#include "nds/registers_alt.h" //[ej]
 
 #ifdef NDS
  #include <nds/jtypes.h>
 #else
- #include "gba_types.h"
+// #include "gba_types.h"
 #endif
+
+#include "com_types.h"
 
 // Disable NDS specific hardware and features if running on a GBA
 #ifndef NDS 

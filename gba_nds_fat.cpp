@@ -43,7 +43,8 @@
 #ifdef NDS
  #define _VARS_IN_RAM 
 #else
- #define _VARS_IN_RAM __attribute__ ((section (".sbss")))
+ //#define _VARS_IN_RAM __attribute__ ((section (".sbss")))
+ #define _VARS_IN_RAM
 #endif
 
 
@@ -2537,7 +2538,7 @@ FAT_FILE* FAT_fopen(const char* path, const char* mode)
 	//iprintf("begin open file\n"); //[will:debug]
 
 	// Check that a valid mode was specified
-	pchTemp = strpbrk ( mode, "rRwWaA" );
+	pchTemp = strpbrk ((char *)mode, "rRwWaA" );
 	if (pchTemp == NULL)
 	{
 		return NULL;

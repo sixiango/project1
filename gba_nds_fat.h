@@ -42,15 +42,16 @@
 // When compiling for NDS, make sure NDS is defined
 #ifndef NDS
  #if defined ARM9 || defined ARM7
-  #define NDS
+  //#define NDS
  #endif
 #endif
 
 #ifdef NDS
  #include <nds/jtypes.h>
 #else
- #include "gba_types.h"
+// #include "gba_types.h"
 #endif
+#include "com_types.h"
 
 #ifdef FILE_TIME_SUPPORT
  #include <time.h>

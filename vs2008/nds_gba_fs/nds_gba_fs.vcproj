@@ -171,7 +171,11 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath="..\..\disc_io.c"
+				RelativePath="..\..\com_types.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\disc_io.cpp"
 				>
 			</File>
 			<File
@@ -179,7 +183,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\gba_nds_fat.c"
+				RelativePath="..\..\gba_nds_fat.cpp"
 				>
 			</File>
 			<File
@@ -187,7 +191,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\io_dldi.c"
+				RelativePath="..\..\io_dldi.cpp"
 				>
 			</File>
 			<File
@@ -195,7 +199,7 @@
 				>
 			</File>
 			<Filter
-				Name="NewFilter1"
+				Name="gba_nds_fat_chg"
 				>
 				<File
 					RelativePath="..\..\gba_nds_fat_chg\getdirentry1.h"
